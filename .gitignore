@@ -82,6 +82,9 @@ typings/
 .nuxt
 dist
 
+# Project build folder
+build/
+
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and *not* Next.js
@@ -102,3 +105,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# WebStorm project settings
+.idea/

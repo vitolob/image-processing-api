@@ -1,0 +1,37 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "API for resizing and serving images to reduce page load size.",
+  "scripts": {
+    "test": "jasmine",
+    "dev": "nodemon --watch './src/**/*.ts' --exec 'ts-node' ./src/index.ts",
+    "build": "npx tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitolob/image-processing-api.git"
+  },
+  "keywords": [
+    "image",
+    "resizing",
+    "api",
+    "library"
+  ],
+  "author": "Victorino Machava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitolob/image-processing-api/issues"
+  },
+  "homepage": "https://github.com/vitolob/image-processing-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
