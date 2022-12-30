@@ -1,11 +1,11 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 import { existsSync, mkdirSync } from "fs";
 import Sharp from "sharp";
 
 const router = Router();
 const cacheDir = "./assets/cache";
 
-router.get("/", (req, res) => {
+router.get("/", (req: Request, res: Response): void => {
   const { filename, width, height } = req.query;
 
   // Check if resized image exists
