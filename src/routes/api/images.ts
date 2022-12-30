@@ -16,17 +16,8 @@ router.get("/", async (req: Request, res: Response): Promise<void> => {
 
   try {
     // Resize and save image in cache
-    const data = await resizeImage(
-      filename as string,
-      Number(width),
-      Number(height)
-    );
-    await saveImageToCache(
-      data,
-      filename as string,
-      Number(width),
-      Number(height)
-    );
+    const data = await resizeImage(filename as string, Number(width), Number(height));
+    await saveImageToCache(data, filename as string, Number(width), Number(height));
 
     res.set("Content-Type", "image/jpeg");
     res.sendFile(cachePath);
