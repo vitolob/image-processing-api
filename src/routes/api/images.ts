@@ -37,7 +37,11 @@ router.get("/", (req: Request, res: Response): void => {
         });
     })
     .catch((err) => {
-      res.status(500).send(err);
+      if (err.message.includes("file is missing")) {
+        res.status(404).send({ error: err.message });
+      } else {
+        res.status(500).send({ error: err.message });
+      }
     });
 });
 
